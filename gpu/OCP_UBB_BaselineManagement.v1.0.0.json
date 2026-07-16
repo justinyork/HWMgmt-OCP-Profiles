@@ -1,7 +1,7 @@
 {
   "SchemaDefinition": "RedfishInteroperabilityProfile.v1_6_0",
   "ProfileName": "OCP_UBB_BaselineManagement",
-  "ProfileVersion": "1.0.0",
+  "ProfileVersion": "1.1.0",
   "Purpose": "Specifies the OCP baseline hardware management requirements for the Redfish interface for GPU based Universal BaseBoard (UBB) platforms.",
   "OwningEntity": "Open Compute Project",
   "ContributedBy": "AMD, Google, Meta, Microsoft, NVIDIA",
@@ -905,27 +905,14 @@
       }
     },
     "UpdateService": {
-      "MinVersion": "1.0.0",
+      "MinVersion": "1.6.0",
       "ReadRequirement": "Mandatory",
       "PropertyRequirements": {
         "FirmwareInventory": {
           "ReadRequirement": "Mandatory"
         },
-        "HttpPushUri": {
+        "MultipartHttpPushUri": {
           "ReadRequirement": "Mandatory"
-        },
-        "HttpPushUriOptions": {
-          "ReadRequirement": "Mandatory",
-          "PropertyRequirements": {
-            "HttpPushUriApplyTime": {
-              "ReadRequirement": "Mandatory",
-              "PropertyRequirements": {
-                "ApplyTime": {
-                  "ReadRequirement": "Mandatory"
-                }
-              }
-            }
-          }
         },
         "ServiceEnabled": {
           "ReadRequirement": "Mandatory"
@@ -948,4 +935,3 @@
       }
     }
   }
-}
